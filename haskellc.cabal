@@ -92,6 +92,7 @@ executable haskellc
     -- Other library packages from which modules are imported.
     build-depends:
         base ^>=4.20.2.0,
+        optparse-applicative ^>=0.19.0.0,
         haskellc
 
     -- Directories containing source files.
