@@ -1,0 +1,35 @@
+cabal-version:      3.0
+name:               haskellc-lexer
+version:            0.1.0.0
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             oleg.icefield
+maintainer:         oleg.icefield@gmail.com
+category:           Language
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:  HaskellLexer
+    build-depends:
+        base ^>=4.20.2.0
+
+    hs-source-dirs:   src
+    default-language: GHC2024
+
+test-suite haskellc-lexer-test
+    import:           warnings
+    default-language: GHC2024
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.20.2.0
