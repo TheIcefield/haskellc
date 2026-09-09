@@ -1,8 +1,8 @@
-module Main (main) where
+module Main where
 
-import qualified MyLib (someFunc)
+import CompilerOptionsParser (CompilerOptions (..), parseCompilerOptions)
 
 main :: IO ()
 main = do
-  putStrLn "Hello, Haskell!"
-  MyLib.someFunc
+  options <- parseCompilerOptions
+  putStrLn $ "Main module: " ++ mainModule options
